@@ -7,7 +7,11 @@ import config from '../config';
 import routes from './routes';
 
 const init = async () => {
-  const server = Hapi.server({ port: config.app.port, router: { isCaseSensitive: false } });
+  const server = Hapi.server({
+    port: config.app.port, router: { isCaseSensitive: false }, routes: {
+      cors: true
+    }
+  });
   server.validator(Joi);
   server.realm.modifiers.route.prefix = config.stripPrefix.path;
   server.route(routes);
