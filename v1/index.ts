@@ -9,7 +9,19 @@ import routes from './routes';
 const init = async () => {
   const server = Hapi.server({
     port: config.app.port, router: { isCaseSensitive: false }, routes: {
-      cors: true
+      cors: {
+        origin: ['*'],
+        headers: ['Accept', 'Authorization', 'Content-Type', 'If-None-Match', 'Accept-language', 'authorization'],
+        additionalHeaders: ['Access-Control-Allow-Origin',
+          'Access-Control-Request-Method',
+          'Allow-Origin',
+          'Origin',
+          'access-control-allow-origin',
+          'access-control-request-method',
+          'allow-origin',
+          'origin',
+        ]
+      }
     }
   });
   server.validator(Joi);
