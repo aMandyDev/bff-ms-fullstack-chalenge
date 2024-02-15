@@ -1,0 +1,1 @@
+{"version":3,"file":"whitelist.js","sourceRoot":"","sources":["../../../v1/schemas/whitelist.ts"],"names":[],"mappings":";;;;AAAA,8CAAqB;AAErB,MAAM,aAAa,GAAG;IAClB,OAAO,EAAE;QACL,SAAS,EAAE;YACP,OAAO,EAAE,aAAG,CAAC,MAAM,CAAC;gBAChB,KAAK,EAAE,aAAG,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;aACjC,CAAC;SACL;KACJ;CACJ,CAAA;AACD,iBAAS,aAAa,CAAC"}
